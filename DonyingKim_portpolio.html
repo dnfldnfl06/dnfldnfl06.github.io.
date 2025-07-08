@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김도녕 | AI/Computer Vision Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', 'Inter', sans-serif;
+            background-color: #111827; /* Dark background */
+            color: #E5E7EB; /* Light text */
+        }
+        .highlight {
+            color: #38BDF8; /* Sky Blue for highlights */
+        }
+        .project-card {
+            background-color: #1F2937; /* Slightly lighter dark for cards */
+            border: 1px solid #374151;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+        .tag {
+            background-color: #374151;
+            color: #D1D5DB;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="container mx-auto px-6 py-16 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
+            <span class="highlight">김도녕</span>
+        </h1>
+        <p class="mt-4 text-lg md:text-xl text-gray-300">AI / Computer Vision Engineer</p>
+        <p class="mt-6 max-w-2xl mx-auto text-gray-400">
+            공간과 사람의 움직임을 데이터화 하고, 사람이 공간에게 주는 영향과 공간이 사람에게 주는 영향을 이해하는 도구를 만들어 가고 있습니다.
+        </p>
+        <div class="mt-8 flex justify-center gap-4">
+            <!-- TODO: GitHub, LinkedIn 등 실제 프로필 링크로 수정하세요 -->
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">GitHub</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+            <a href="mailto:dnkim9970@gmail.com" class="text-gray-400 hover:text-white transition-colors">Email</a>
+        </div>
+    </header>
+
+
+    <main class="container mx-auto px-6">
+        
+        <!-- ✅ '기술' 섹션 추가 완료 -->
+        <section class="py-12">
+            <h2 class="text-3xl font-bold text-center mb-12">기술 (Skills)</h2>
+            <div class="max-w-5xl mx-auto bg-gray-900/50 rounded-xl p-8 border border-gray-700">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="font-bold text-lg mb-3 text-sky-400">Programming Languages</h3>
+                        <p class="text-gray-300">Python (고급), MATLAB (고급), C</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-3 text-sky-400">Deep Learning Frameworks</h3>
+                        <p class="text-gray-300">PyTorch, ONNX, TensorFlow Lite</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-3 text-sky-400">AI / ML</h3>
+                        <p class="text-gray-300">객체 탐지 및 추적, Re-ID, 멀티모달 융합, 이종 영상 매칭, 3D 맵핑 등</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    <main class="container mx-auto px-6">
+        <!-- Projects Section -->
+        <section class="py-12">
+            <h2 class="text-3xl font-bold text-center mb-12">프로젝트</h2>
+            <div class="space-y-20">
+
+                <!-- Project 1 -->
+                <article class="project-card rounded-xl overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2"> Non-common views Re-ID & 3D Pose Localization system for Interaction monitoring</h3>
+                        <p class="text-sm text-gray-400 mb-4">2024.07 - 2025.07 | 라이프로그용 멀티모달 언택트센싱 선도연구센터(RLRC)</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tag text-xs font-semibold px-3 py-1 rounded-full">#3D_Mapping</span>
+                            <span class="tag text-xs font-semibold px-3 py-1 rounded-full">#Object_Tracking</span>
+                            <span class="tag text-xs font-semibold px-3 py-1 rounded-full">#Digital_Twin</span>
+                            <span class="tag text-xs font-semibold px-3 py-1 rounded-full">#Pose_Estimation</span>
+                        </div>
+                        <div class="space-y-4 text-gray-300">
+                            <p>추가 센서 없이, 단일 CCTV 카메라 영상만을 활용하여 실내 공간의 3D 지도를 생성하고, 사람의 동선과 자세를 추적하는 디지털 트윈 시스템을 개발했습니다. 병원 및 가정 환경에서 환자의 활동성을 모니터링하는 것을 목표로, 사용자 편의성과 시스템 효율성에 중점을 두었습니다.</p>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><span class="font-semibold highlight">3D 재구성 및 위치 추정 알고리즘 개발:</span> 3D 재구성 기술을 응용하여, 영상만으로 기하학적 관계를 계산하는 위치 추정 알고리즘 구현.</li>
+                                <li><span class="font-semibold highlight">높은 정확도 달성:</span> 평균 약 15cm이내의 위치 추정 오차 달성.</li>
+                                <li><span class="font-semibold highlight">디지털 트윈 시스템 구축:</span> 3D 맵에 추정된 위치와 자세 정보를 실시간으로 시각화하여 직관적인 모니터링 시스템 완성.</li>
+                            </ul>
+                        </div>
+                         <div class="mt-6">
+                            <a href="#" class="font-semibold text-sky-400 hover:text-sky-300">특허 보기 &rarr;</a>
+
+                    </div>
+                     <div class="bg-gray-900 p-8">
+                        <h4 class="text-lg font-semibold mb-4 text-center">3D Segmentation Integration</h4>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <img src="Image\Segmentation_integration_result.png" alt="3D 맵 생성 과정 이미지" class="rounded-lg shadow-lg w-full">
+                            </div>
+                            <div>
+                                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                                    <iframe width="640" height="540" src="https://www.youtube.com/embed/I6ry0TEbWLU?si=eoN6Fum3hhdxrjTY&amp;start=32" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <p class="text-center text-sm mb-2 text-gray-400">0:32 Results of SAM2 / 1:21 Results of Segmenation integration / 3:04 Boxed Segments</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- Project 2 -->
+                <article class="project-card rounded-xl overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2">지능형 화기조준경을 위한 이종 영상 정합 알고리즘 개발</h3>
+                        <p class="text-sm text-gray-400 mb-4">2023.03 - 2025.02 | 한화시스템 (산학협력)</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tag text-xs font-semibold px-3 py-1 rounded-full">#Image_matching</span>
+                            <span class="tag text-xs font-semibold px-3 py-1 rounded-full">#Deep_Learning</span>
+                            <span class="tag text-xs font-semibold px-3 py-1 rounded-full">#Multi-Modal</span>
+                            <span class="tag text-xs font-semibold px-3 py-1 rounded-full">#PyTorch</span>
+                        </div>
+                        <div class="space-y-4 text-gray-300">
+                            <p>개인 전투체계의 지능형 화기 조준경 개발 과제의 일환으로, 헬멧의 광각 가시광(EO) 영상과 조준경의 협각 적외선(IR) 영상을 실시간으로 정합하는 AI 모델을 개발했습니다. 이종(Multi-modal) 영상 간의 비선형적 밝기 차이와 형상 차이를 극복하여, 어떤 환경에서도 픽셀 단위의 정밀한 조준을 지원하는 것을 목표로 했습니다.</p>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><span class="font-semibold highlight">새로운 CNN 구조(RecNet) 설계:</span> Pooling layer를 제거한 독자적인 CNN 모델을 설계하여 이종 영상의 형상 차이를 학습시키는 데 성공.</li>
+                                <li><span class="font-semibold highlight">성능 획기적 향상:</span> 이종 영상 매칭 성공률을 68.9%에서 97%로 향상, 처리 속도는 10배 단축(20ms → 1.8ms)하여 실시간성 확보.</li>
+                                <li><span class="font-semibold highlight">국방 과제 기여:</span> 개발된 알고리즘은 실제 국방 과제의 요구 성능(PDR)을 만족하며 기술의 실용성을 입증.</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10811895" target="_blank" class="font-semibold text-sky-400 hover:text-sky-300">논문 보기 &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900 p-8">
+                        <h4 class="text-lg font-semibold mb-4 text-center">결과 시각화</h4>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <p class="text-center text-sm mb-2 text-gray-400">모델 구조도</p>
+                                <!-- 여기에 RecNet 모델 구조 이미지를 삽입하세요 -->
+                                <img src="Image\whole_parted.png" alt="RecNet 모델 구조 이미지" class="rounded-lg shadow-lg w-full">
+                            </div>
+                            <div>
+                                <p class="text-center text-sm mb-2 text-gray-400">결과 비교 (기존 vs 제안)</p>
+                                <!-- 여기에 정합 실패/성공 비교 이미지를 삽입하세요 -->
+                                <img src="Image\comparison_result.png" alt="정합 실패 vs 성공 비교 이미지" class="rounded-lg shadow-lg w-full">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card rounded-xl overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2">단안 카메라 기반 실내 동선 추적 및 3D 디지털 트윈 시스템</h3>
+                        <p class="text-sm text-gray-400 mb-4">2023.07 - 2024.07 | 라이프로그용 멀티모달 언택트센싱 선도연구센터(RLRC)</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tag text-xs font-semibold px-3 py-1 rounded-full">#3D_Mapping</span>
+                            <span class="tag text-xs font-semibold px-3 py-1 rounded-full">#Object_Tracking</span>
+                            <span class="tag text-xs font-semibold px-3 py-1 rounded-full">#Digital_Twin</span>
+                            <span class="tag text-xs font-semibold px-3 py-1 rounded-full">#Pose_Estimation</span>
+                        </div>
+                        <div class="space-y-4 text-gray-300">
+                            <p>추가 센서 없이, 단일 CCTV 카메라 영상만을 활용하여 실내 공간의 3D 지도를 생성하고, 사람의 동선과 자세를 추적하는 디지털 트윈 시스템을 개발했습니다. 병원 및 가정 환경에서 환자의 활동성을 모니터링하는 것을 목표로, 사용자 편의성과 시스템 효율성에 중점을 두었습니다.</p>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><span class="font-semibold highlight">3D 재구성 및 위치 추정 알고리즘 개발:</span> 3D 재구성 기술을 응용하여, 영상만으로 기하학적 관계를 계산하는 위치 추정 알고리즘 구현.</li>
+                                <li><span class="font-semibold highlight">높은 정확도 달성:</span> 평균 약 15cm이내의 위치 추정 오차 달성.</li>
+                                <li><span class="font-semibold highlight">디지털 트윈 시스템 구축:</span> 3D 맵에 추정된 위치와 자세 정보를 실시간으로 시각화하여 직관적인 모니터링 시스템 완성.</li>
+                            </ul>
+                        </div>
+                         <div class="mt-6">
+                            <a href="#" class="font-semibold text-sky-400 hover:text-sky-300">특허 보기 &rarr;</a>
+                        </div>
+                    </div>
+                     <div class="bg-gray-900 p-8">
+                        <h4 class="text-lg font-semibold mb-4 text-center">결과 시각화</h4>
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <p class="text-center text-sm mb-2 text-gray-400">3D 맵 생성 과정</p>
+                                <img src="Image\mapping.png" alt="3D 맵 생성 과정 이미지" class="rounded-lg shadow-lg w-full">
+                            </div>
+                            <div>
+                                <p class="text-center text-sm mb-2 text-gray-400">실시간 동선 및 자세 추정 (데모)</p>
+                                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                                    <iframe width="640" height="512" src="https://www.youtube.com/embed/mSkkhZ4ZDlY?si=fdTZmUElCrG1boyD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ✅ '그외 프로젝트' 섹션 수정 완료 -->
+                <article class="project-card rounded-xl overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2">그 외 프로젝트 및 추가 자료</h3>
+                        <p class="text-gray-400 mb-6">석사 과정 중 수행한 다양한 컴퓨터 비전 및 AI 관련 연구 요약입니다.</p>
+                        <div class="space-y-4 text-gray-300">
+                            <ul class="list-disc list-inside space-y-3">
+                                <li><span class="font-semibold highlight">IR-Radar 통합 추적 미사일 알고리즘:</span> 칼만 필터를 이용한 센서 융합 및 실시간 타겟 추적 시뮬레이션. #Missile_Tracking #Kalman_Filter #Sensor_Fusion</li>
+                                <li><span class="font-semibold highlight">멀티뷰 통합 위치 및 자세 추정 시스템:</span> 다중 카메라의 정보를 통합하여 3D 공간상 객체의 위치와 자세를 정밀하게 추정. #Multi_View #3D_Mapping #Pose_Estimation</li>
+                                <li><span class="font-semibold highlight">Image-Text 기반 Re-ID:</span> CLIP 모델을 활용하여 이미지뿐만 아니라 '갈색 셔츠'와 같은 텍스트 설명으로도 특정 인물을 재식별. #Re-ID #CLIP #Image_Text_Matching</li>
+                                <li><span class="font-semibold highlight">3D Thermal Map 생성 연구:</span> 가시광(EO) 영상으로 3D 지도를 생성하고, 제안한 RecNet으로 정합된 열(LWIR) 영상을 투영하여 3D 열지도 생성. #3D_Reconstruction #Thermal_Map #Multi-Modal</li>
+                                <li><span class="font-semibold highlight">3D SAR Map 생성 연구:</span> 위성(SAR) 이미지의 반사율(Threshold)을 분석하여 3D 지도 위에 시각화하는 기술 연구. #SAR #3D_Mapping #Satellite_Imagery</li>
+                            </ul>
+                        </div>
+                         <div class="mt-8">
+                            <!-- ✅ PDF 파일 링크 수정 완료. HTML 파일과 같은 폴더에 PDF를 두세요. -->
+                            <a href="프로젝트 추가자료.pdf" target="_blank" class="font-semibold text-sky-400 hover:text-sky-300">전체 내용 PDF로 보기 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-10">
+        <p class="text-gray-500 text-sm">&copy; 2025 김도녕. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
